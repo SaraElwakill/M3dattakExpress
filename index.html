@@ -7,12 +7,29 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header class="header">
-      <h1>كتالوج منتجاتنا</h1>
-      <p>اكتشفوا أحدث المنتجات المتوفرة لدينا.</p>
-    </header>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="container">
+        <span class="logo">M3dattak Express</span>
+        <ul class="nav-links">
+          <li><a href="#catalog">المنتجات</a></li>
+          <li><a href="#about">عن المتجر</a></li>
+          <li><a href="#contact">تواصل معنا</a></li>
+        </ul>
+      </div>
+    </nav>
 
-    <main class="catalog">
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>مرحباً بكم في متجر معداتك</h1>
+        <p>أفضل المنتجات التقنية والهندسية بين يديك!</p>
+        <a href="#catalog" class="hero-btn">تسوق الآن</a>
+      </div>
+    </section>
+
+    <!-- Product Catalog -->
+    <main id="catalog" class="catalog">
       <div class="product-card">
         <img
           src="https://res.cloudinary.com/durcrs1wn/image/upload/v1758122702/solder_msfuf4.jpg"
@@ -21,26 +38,56 @@
         />
         <div class="product-info">
           <h2 class="product-name">926 micro motors</h2>
+          <div class="product-rating">
+            <span>★ ★ ★ ★ ☆</span>
+          </div>
           <p class="product-description">
-            هنا يتم وضع وصف قصير ومميز للمنتج. يمكن أن يحتوي على الخامات أو
-            المزايا الرئيسية.
+            هنا يتم وضع وصف قصير ومميز للمنتج. يمكن أن يحتوي على الخامات أو المزايا الرئيسية.
           </p>
           <span class="product-price">150 جنيه مصري</span>
+          <button class="add-to-cart">أضف إلى السلة</button>
         </div>
       </div>
 
       <div class="product-card">
         <img
-          src="placeholder-image2.jpg"
+          src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80"
           alt="اسم المنتج الثاني"
           class="product-image"
         />
         <div class="product-info">
           <h2 class="product-name">اسم المنتج الثاني</h2>
+          <div class="product-rating">
+            <span>★ ★ ★ ★ ★</span>
+          </div>
           <p class="product-description">وصف المنتج الثاني هنا.</p>
           <span class="product-price">200 جنيه مصري</span>
+          <button class="add-to-cart">أضف إلى السلة</button>
         </div>
       </div>
     </main>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="container">
+        <h2>عن معداتك</h2>
+        <p>نحن متجر متخصص في بيع أحدث المعدات التقنية والهندسية مع ضمان الجودة وخدمة عملاء مميزة.</p>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2>تواصل معنا</h2>
+        <p>للاستفسارات أو الطلبات الخاصة، يرجى التواصل عبر البريد الإلكتروني: <a href="mailto:info@m3dattak.com">info@m3dattak.com</a></p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <p>جميع الحقوق محفوظة &copy; معداتك 2025</p>
+      </div>
+    </footer>
   </body>
 </html>
