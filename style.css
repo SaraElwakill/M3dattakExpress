@@ -152,7 +152,7 @@ body {
 .product-image {
   width: 100%;
   height: 210px;
-  object-fit: contain;
+  object-fit: fill;
   background: #f7fafc;
   padding: 18px 0;
 }
