@@ -1,7 +1,8 @@
+/* تعديل الألوان والـ padding لتناسب ألوان اللوجو وتكون أكثر أناقة */
 
 body {
   font-family: 'Cairo', Arial, sans-serif;
-  background-color: #f4f4f4;
+  background-color: #f7fafc;
   margin: 0;
   padding: 0;
   direction: rtl;
@@ -10,10 +11,10 @@ body {
 
 /* Navbar */
 .navbar {
-  background: #222;
+  background: #1ebea5;
   color: #fff;
-  padding: 0.5rem 0;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  padding: 0.7rem 0;
+  box-shadow: 0 2px 8px rgba(30,190,165,0.08);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -24,7 +25,7 @@ body {
   justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 28px;
 }
 .logo {
   font-size: 1.7em;
@@ -32,21 +33,21 @@ body {
   letter-spacing: 1px;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
 }
 .brand-logo {
-  width: 38px;
-  height: 38px;
+  width: 42px;
+  height: 42px;
   object-fit: contain;
   background: #fff;
   border-radius: 50%;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  box-shadow: 0 2px 8px rgba(30,190,165,0.10);
   border: 2px solid #ff9800;
 }
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 1.5em;
+  gap: 2em;
   margin: 0;
   padding: 0;
 }
@@ -55,9 +56,12 @@ body {
   text-decoration: none;
   font-size: 1.1em;
   transition: color 0.2s;
+  padding: 6px 14px;
+  border-radius: 8px;
 }
 .nav-links li a:hover {
-  color: #ff9800;
+  background: #ff9800;
+  color: #fff;
 }
 
 /* Hero Section */
@@ -65,8 +69,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(120deg, #e0f7fa 0%, #fff 100%);
-  padding: 3rem 0 2rem 0;
+  background: linear-gradient(120deg, #1ebea5 0%, #ff9800 100%);
+  padding: 3.5rem 0 2.5rem 0;
   min-height: 320px;
 }
 .simple-hero {
@@ -76,77 +80,85 @@ body {
   text-align: center;
 }
 .hero-logo {
-  width: 80px;
-  height: 80px;
-  border-radius: 16px;
+  width: 90px;
+  height: 90px;
+  border-radius: 18px;
   margin-bottom: 1.2rem;
-  border: 2px solid #eee;
+  border: 2px solid #fff;
   object-fit: cover;
-  box-shadow: 0 2px 8px rgba(30,190,165,0.07);
+  box-shadow: 0 2px 12px rgba(30,190,165,0.13);
+  background: #fff;
 }
 .hero-content h1 {
-  font-size: 2.2rem;
+  font-size: 2.3rem;
   font-weight: 700;
   margin: 0 0 1rem 0;
-  color: #222;
+  color: #fff;
   line-height: 1.3;
+  letter-spacing: 1px;
 }
 .hero-desc {
-  font-size: 1.1rem;
-  color: #555;
+  font-size: 1.15rem;
+  color: #fff;
   margin-bottom: 2rem;
+  opacity: 0.95;
 }
 .hero-btn {
-  background: #1ebea5;
-  color: #fff;
-  padding: 0.7rem 2rem;
+  background: #fff;
+  color: #1ebea5;
+  padding: 0.7rem 2.2rem;
   border: none;
   border-radius: 30px;
   font-size: 1.1rem;
   font-weight: bold;
   text-decoration: none;
   box-shadow: 0 2px 8px rgba(30,190,165,0.10);
-  transition: background 0.2s;
+  transition: background 0.2s, color 0.2s;
 }
 .hero-btn:hover {
-  background: #159e8b;
+  background: #ff9800;
+  color: #fff;
 }
+
 /* Product Catalog */
 .catalog {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  padding: 20px;
+  gap: 28px;
+  padding: 32px 18px;
   max-width: 1200px;
-  margin: 20px auto;
+  margin: 32px auto 20px auto;
 }
 
 .product-card {
   background-color: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  box-shadow: 0 4px 18px rgba(30,190,165,0.10);
   overflow: hidden;
   transition: transform 0.2s, box-shadow 0.2s;
   text-align: right;
   display: flex;
   flex-direction: column;
-  min-height: 480px;
+  min-height: 420px;
+  border: 1.5px solid #e0f7fa;
 }
 
 .product-card:hover {
   transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 8px 24px rgba(255, 152, 0, 0.15);
+  box-shadow: 0 8px 28px rgba(255, 152, 0, 0.13);
+  border-color: #ff9800;
 }
 
 .product-image {
   width: 100%;
-  height: 250px;
-  object-fit: cover;
-  background: #fafafa;
+  height: 210px;
+  object-fit: contain;
+  background: #f7fafc;
+  padding: 18px 0;
 }
 
 .product-info {
-  padding: 20px 18px 18px 18px;
+  padding: 18px 18px 18px 18px;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -155,8 +167,9 @@ body {
 
 .product-name {
   margin: 0 0 10px;
-  font-size: 1.4em;
-  color: #222;
+  font-size: 1.25em;
+  color: #1ebea5;
+  font-weight: bold;
 }
 
 .product-rating {
@@ -171,27 +184,6 @@ body {
   margin-bottom: 15px;
 }
 
-.product-price {
-  font-size: 1.2em;
-  color: #388e3c;
-  font-weight: bold;
-  margin-bottom: 12px;
-  display: block;
-}
-
-.add-to-cart {
-  background: #ff9800;
-  color: #fff;
-  border: none;
-  border-radius: 20px;
-  padding: 10px 0;
-  font-size: 1.1em;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.2s;
-  width: 100%;
-  box-shadow: 0 2px 8px rgba(255,152,0,0.08);
-}
 .whatsapp-btn {
   display: inline-flex;
   align-items: center;
@@ -223,23 +215,24 @@ body {
   vertical-align: middle;
   margin-left: 4px;
 }
-}
+
+/* About & Contact */
 .about .container, .contact .container {
   max-width: 900px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 24px;
 }
 .contact a {
-  color: #e65100;
+  color: #ff9800;
   text-decoration: underline;
 }
 .contact a:hover {
-  color: #ff9800;
+  color: #1ebea5;
 }
 
 /* Footer */
 .footer {
-  background: #222;
+  background: #1ebea5;
   color: #fff;
   text-align: center;
   padding: 18px 0 10px 0;
@@ -250,4 +243,40 @@ body {
   max-width: 900px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .navbar .container,
+  .catalog,
+  .about .container,
+  .contact .container {
+    padding: 0 10px;
+  }
+  .catalog {
+    gap: 18px;
+    padding: 18px 6px;
+  }
+  .hero {
+    padding: 2.2rem 0 1.5rem 0;
+  }
+}
+@media (max-width: 600px) {
+  .navbar .container,
+  .about .container,
+  .contact .container {
+    padding: 0 4px;
+  }
+  .catalog {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 10px 2px;
+  }
+  .hero-content h1 {
+    font-size: 1.3rem;
+  }
+  .hero-logo {
+    width: 60px;
+    height: 60px;
+  }
 }
