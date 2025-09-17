@@ -163,22 +163,23 @@ body {
   box-shadow: 0 2px 8px rgba(255,152,0,0.08);
 }
 .whatsapp-btn {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 5px;
   background: linear-gradient(90deg, #25d366 0%, #128c7e 100%);
   color: #fff;
   border: none;
-  border-radius: 22px;
-  padding: 12px 0;
-  font-size: 1.13em;
-  font-weight: bold;
+  border-radius: 16px;
+  padding: 7px 18px;
+  font-size: 1em;
+  font-weight: 600;
   cursor: pointer;
   transition: background 0.2s, box-shadow 0.2s;
-  width: 100%;
-  box-shadow: 0 2px 12px rgba(37,211,102,0.10);
-  letter-spacing: 1px;
+  width: auto;
+  min-width: 120px;
+  box-shadow: 0 2px 8px rgba(37,211,102,0.10);
+  letter-spacing: 0.5px;
   text-decoration: none;
 }
 .whatsapp-btn:hover {
@@ -186,11 +187,11 @@ body {
   box-shadow: 0 4px 18px rgba(37,211,102,0.18);
 }
 .whatsapp-logo {
-  width: 24px;
-  height: 24px;
+  width: 18px;
+  height: 18px;
   display: inline-block;
   vertical-align: middle;
-  margin-left: 6px;
+  margin-left: 4px;
 }
 }
 .about .container, .contact .container {
