@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>كتالوج منتجاتنا</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>كتالوج منتجاتنا</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <!-- Navigation Bar -->
     <nav class="navbar">
       <div class="container">
-        <span class="logo">M3dattak Express</span>
+        <span class="logo">M3dattak <span class="highlight">Express</span></span>
         <ul class="nav-links">
           <li><a href="#catalog">المنتجات</a></li>
           <li><a href="#about">عن المتجر</a></li>
@@ -22,7 +25,7 @@
     <!-- Hero Section -->
     <section class="hero">
       <div class="hero-content">
-        <h1>مرحباً بكم في متجر معداتك</h1>
+        <h1>مرحباً بكم في <span class="highlight">متجر معداتك</span></h1>
         <p>أفضل المنتجات التقنية والهندسية بين يديك!</p>
         <a href="#catalog" class="hero-btn">تسوق الآن</a>
       </div>
@@ -31,11 +34,13 @@
     <!-- Product Catalog -->
     <main id="catalog" class="catalog">
       <div class="product-card">
-        <img
-          src="https://res.cloudinary.com/durcrs1wn/image/upload/v1758122702/solder_msfuf4.jpg"
-          alt="926 micro motors"
-          class="product-image"
-        />
+        <div class="product-image-wrapper">
+          <img
+            src="https://res.cloudinary.com/durcrs1wn/image/upload/v1758122702/solder_msfuf4.jpg"
+            alt="926 micro motors"
+            class="product-image"
+          />
+        </div>
         <div class="product-info">
           <h2 class="product-name">926 micro motors</h2>
           <div class="product-rating">
@@ -50,11 +55,13 @@
       </div>
 
       <div class="product-card">
-        <img
-          src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80"
-          alt="اسم المنتج الثاني"
-          class="product-image"
-        />
+        <div class="product-image-wrapper">
+          <img
+            src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80"
+            alt="اسم المنتج الثاني"
+            class="product-image"
+          />
+        </div>
         <div class="product-info">
           <h2 class="product-name">اسم المنتج الثاني</h2>
           <div class="product-rating">
@@ -86,7 +93,7 @@
     <!-- Footer -->
     <footer class="footer">
       <div class="container">
-        <p>جميع الحقوق محفوظة &copy; معداتك 2025</p>
+        <p>جميع الحقوق محفوظة &copy; <span class="highlight">معداتك 2025</span></p>
       </div>
     </footer>
   </body>
