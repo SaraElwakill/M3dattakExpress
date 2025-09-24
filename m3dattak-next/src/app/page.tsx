@@ -22,12 +22,12 @@ export default function Home() {
                 }
                 const data = await response.json();
                 // التأكد من أن حقول البيانات مطابقة للأسماء في Google Sheet
-        const formattedProducts = data.map((item: any) => ({
-          name: item.ProductName,
-          image: item.ImageURL,
-          rating: item.Rating,
-          description: item.ProductDescription,
-        }));
+        const formattedProducts = data.map((item) => ({
+                    id: item.ID,
+                    name: item.Name,
+                    image: item.imageUrl,
+                    description: item.Description,
+                }));
                 setProducts(formattedProducts);
             } catch (error) {
                 console.error('حدث خطأ في جلب البيانات:', error);

@@ -16,9 +16,10 @@ import ProductCard from './ProductCard';
 //   },
 // ];
 
-const Catalog = ({products}:any) => (
+
+const Catalog = ({ products }: any) => (
   <main id="catalog" className="catalog container mx-auto py-10">
-    {products??products.map((product:any, idx:any) => (
+    {Array.isArray(products) && products.map((product: any, idx: any) => (
       <ProductCard key={idx} {...product} />
     ))}
   </main>
