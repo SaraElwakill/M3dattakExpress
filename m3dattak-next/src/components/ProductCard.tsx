@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 interface ProductCardProps {
   image: string;
@@ -7,12 +8,24 @@ interface ProductCardProps {
   description: string;
 }
 
+
 const ProductCard = ({ image, name, rating, description }: ProductCardProps) => (
-  <div className="product-card bg-white shadow-md rounded-lg overflow-hidden flex flex-col md:flex-row mb-6">
-    <div className="product-image-wrapper md:w-1/3 flex justify-center items-center p-4">
-      <img src={image} alt={name} className="product-image w-32 h-32 object-contain" />
+  <div
+    className="product-card bg-white shadow-md rounded-lg overflow-hidden flex flex-col mb-6"
+    style={{ width: '340px', minHeight: '440px', maxWidth: '100%' }}
+  >
+    <div className="product-image-wrapper flex justify-center items-center p-0" style={{ height: '210px', background: '#f7fafc' }}>
+      <Image
+        src={image}
+        alt={name}
+        width={320}
+        height={210}
+        className="product-image"
+        style={{ objectFit: 'contain', width: '100%', height: '210px', display: 'block', background: '#f7fafc' }}
+        unoptimized
+      />
     </div>
-    <div className="product-info md:w-2/3 p-4 flex flex-col justify-between">
+    <div className="product-info p-5 flex flex-col justify-between" style={{ flex: 1 }}>
       <h2 className="product-name text-xl font-bold mb-2">{name}</h2>
       <div className="product-rating text-yellow-500 mb-2">
         <span>{rating}</span>
