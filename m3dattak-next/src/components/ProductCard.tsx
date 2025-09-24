@@ -4,12 +4,12 @@ import Image from 'next/image';
 interface ProductCardProps {
   image: string;
   name: string;
-  rating: string;
+ 
   description: string;
 }
 
 
-const ProductCard = ({ image, name, rating, description }: ProductCardProps) => (
+const ProductCard = ({ image, name,  description }: ProductCardProps) => (
   <div
     className="product-card bg-white shadow-md rounded-lg overflow-hidden flex flex-col mb-6"
     style={{ width: '340px', minHeight: '440px', maxWidth: '100%' }}
@@ -27,9 +27,9 @@ const ProductCard = ({ image, name, rating, description }: ProductCardProps) => 
     </div>
     <div className="product-info p-5 flex flex-col justify-between" style={{ flex: 1 }}>
       <h2 className="product-name text-xl font-bold mb-2">{name}</h2>
-      <div className="product-rating text-yellow-500 mb-2">
+      {/* <div className="product-rating text-yellow-500 mb-2">
         <span>{rating}</span>
-      </div>
+      </div> */}
       <p className="product-description mb-4">{description}</p>
       <a className="whatsapp-btn flex items-center gap-2 bg-green-500 text-white px-4 py-2 rounded" href="https://wa.me/201119201970" target="_blank" rel="noopener">
         <Image src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" className="whatsapp-logo w-5 h-5" />
