@@ -1,6 +1,11 @@
 import React from 'react';
 import ProductCard from './ProductCard';
-
+type Product = {
+  id: string | number;
+  name: string;
+  image: string;
+  description: string;
+};
 // const products = [
 //   {
 //     image: 'https://res.cloudinary.com/durcrs1wn/image/upload/v1758122702/solder_msfuf4.jpg',
@@ -19,7 +24,7 @@ import ProductCard from './ProductCard';
 
 const Catalog = ({ products }: any) => (
   <main id="catalog" className="catalog container mx-auto py-10">
-    {Array.isArray(products) && products.map((product: any, idx: any) => (
+    {Array.isArray(products) && products.map((product: Product, idx: string) => (
       <ProductCard key={idx} {...product} />
     ))}
   </main>
