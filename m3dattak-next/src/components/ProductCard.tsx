@@ -32,7 +32,7 @@ const ProductCard = ({ image, name, rating, description }: ProductCardProps) => 
       </div>
       <p className="product-description mb-4">{description}</p>
       <a className="whatsapp-btn flex items-center gap-2 bg-green-500 text-white px-4 py-2 rounded" href="https://wa.me/201119201970" target="_blank" rel="noopener">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" className="whatsapp-logo w-5 h-5" />
+        <Image src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" className="whatsapp-logo w-5 h-5" />
         تواصل واتساب
       </a>
     </div>
