@@ -13,7 +13,14 @@ type FormattedProduct = {
   image: string;
   description: string;
 };
-
+type Product = {
+  ID: string | number;
+  Image?: string; // Optional field
+  Name: string;
+  Description: string;
+  ImageUrl: string;
+  Categories: string[];
+};
 export default function Home() {
   const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -28,7 +35,7 @@ export default function Home() {
                 }
                 const data = await response.json();
                 // التأكد من أن حقول البيانات مطابقة للأسماء في Google Sheet
-        const formattedProducts = data.map((item:FormattedProduct) => ({
+        const formattedProducts = data.map((item:Product) => ({
                     id: item.ID,
                     name: item.Name,
                     image: item.imageUrl,
