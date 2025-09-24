@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react';
 import ProductCard from './ProductCard';
 type Product = {
@@ -5,6 +6,7 @@ type Product = {
   name: string;
   image: string;
   description: string;
+  rating?: string;
 };
 // const products = [
 //   {
