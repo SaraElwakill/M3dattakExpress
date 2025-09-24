@@ -7,6 +7,12 @@ import About from "../components/About";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import { useState, useEffect } from "react";
+type FormattedProduct = {
+  id: string | number;
+  name: string;
+  image: string;
+  description: string;
+};
 
 export default function Home() {
   const [products, setProducts] = useState([]);
@@ -22,7 +28,7 @@ export default function Home() {
                 }
                 const data = await response.json();
                 // التأكد من أن حقول البيانات مطابقة للأسماء في Google Sheet
-        const formattedProducts = data.map((item) => ({
+        const formattedProducts = data.map((item:FormattedProduct) => ({
                     id: item.ID,
                     name: item.Name,
                     image: item.imageUrl,
