@@ -18,7 +18,7 @@ type Product = {
   Image?: string; // Optional field
   Name: string;
   Description: string;
-  ImageUrl: string;
+  imageUrl: string;
   Categories: string[];
 };
 export default function Home() {
