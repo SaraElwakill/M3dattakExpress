@@ -22,7 +22,7 @@ type Product = {
 // ];
 
 
-const Catalog = ({ products }: any) => (
+const Catalog = ({ products }:  { products: Product[] }) => (
   <main id="catalog" className="catalog container mx-auto py-10">
     {Array.isArray(products) && products.map((product: Product, idx: string) => (
       <ProductCard key={idx} {...product} />
