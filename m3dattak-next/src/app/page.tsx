@@ -76,7 +76,7 @@ interface HomeProps {
 
 // الرابط العام لملف CSV الخاص بك
 const SHEET_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTNgaG4CLuepBIX0L5w8uaIY32xFQCjumb8Vno6eUR9Bwr6UAjkT3RwKkwnSFI2ijzDJc0eNQF1eSY5/pub?output=csv';
-async function fetchSheetData(): Promise<SheetItem[]> {
+async function fetchSheetData(): Promise<Product[]> {
   try {
     const response = await fetch(SHEET_CSV_URL);
     if (!response.ok) {
@@ -85,7 +85,7 @@ async function fetchSheetData(): Promise<SheetItem[]> {
     }
 
     const csvText = await response.text();
-    const { data } = Papa.parse<SheetItem>(csvText, {
+    const { data } = Papa.parse<Product>(csvText, {
       header: true,
       skipEmptyLines: true,
     });
