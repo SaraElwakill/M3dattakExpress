@@ -8,6 +8,7 @@ interface ProductCardProps {
   Name: string;
   Description: string;
   badge: string; // خاصية الشارة الجديدة
+  Categories: string; // خاصية التصنيفات
 }
 
 const WHATSAPP_NUMBER = "201119201970"; 
