@@ -3,7 +3,7 @@ import Image from 'next/image';
 const Hero = () => (
   <section className="hero bg-gray-50 py-10">
     <div className="hero-content simple-hero flex flex-col items-center">
-      <Image src="https://res.cloudinary.com/durcrs1wn/image/upload/v1758127249/M3dattak_Express_-%D9%85%D8%B9%D8%AF%D8%A7%D8%AA%D9%83_%D8%A5%D9%83%D8%B3%D8%A8%D8%B1%D8%B3_trocnc.jpg" alt="M3dattak Logo" className="hero-logo w-24 h-24 rounded-full mb-4" />
+      <Image width={50} height={50} src="https://res.cloudinary.com/durcrs1wn/image/upload/v1758127249/M3dattak_Express_-%D9%85%D8%B9%D8%AF%D8%A7%D8%AA%D9%83_%D8%A5%D9%83%D8%B3%D8%A8%D8%B1%D8%B3_trocnc.jpg" alt="M3dattak Logo" className="hero-logo w-24 h-24 rounded-full mb-4" />
       <h1 className="text-3xl font-bold mb-2">
         <span className="highlight text-blue-600">معداتك إكسبرس</span>
       </h1>
