@@ -71,7 +71,7 @@ export interface Product {
 
 // 2. تعريف نوع (Interface) للـ Props التي يستقبلها المكون (Component)
 interface HomeProps {
-  sheetData: SheetItem[];
+  sheetData: Product[];
 }
 
 // الرابط العام لملف CSV الخاص بك
