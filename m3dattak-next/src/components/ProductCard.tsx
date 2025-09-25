@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Badge from './Badge';
 import { Product } from '../app/page';
 interface ProductCardProps {
+  ID: string;
   imageUrl: string;
   Name: string;
   Description: string;
