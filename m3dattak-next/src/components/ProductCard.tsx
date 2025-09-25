@@ -11,7 +11,10 @@ interface ProductCardProps {
 }
 
 const WHATSAPP_NUMBER = "201119201970"; 
-function ProductCard  ({ imageUrl, Name,  Description,badge }: ProductCardProps) {
+
+function ProductCard ({ imageUrl, Name,  Description,badge }: ProductCardProps) {
+
+
    const getWhatsappLink = (): string => {
         // 1. بناء الرسالة بالعربية
         const message = `
@@ -61,7 +64,7 @@ return (
         تواصل واتساب
       </a>
     </div>
-  </div>
-};
+  </div>)
+}
 
 export default ProductCard;
