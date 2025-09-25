@@ -11,7 +11,7 @@ interface ProductCardProps {
 
 const WHATSAPP_NUMBER = "201119201970"; 
 
-function ProductCard ({ imageUrl, Name,  Description,badge }: ProductCardProps) {
+function ProductCard ({ imageUrl, Name,  Description,badge,ID }: ProductCardProps) {
 
 
    const getWhatsappLink = (): string => {
