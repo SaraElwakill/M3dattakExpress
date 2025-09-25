@@ -357,7 +357,7 @@ a {
         /* حل مشكلة تمركز الكارت: عمود واحد يملأ العرض */
         grid-template-columns: 1fr;
         gap: 15px;
-        padding: 0 10px; 
+        padding: 0 5px; 
     }
     .product-card {
         width: 100%; 

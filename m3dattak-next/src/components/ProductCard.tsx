@@ -17,8 +17,8 @@ function ProductCard ({ imageUrl, Name,  Description,badge,ID, Categories }: Pro
 
 
    const getWhatsappLink = (): string => {
-        // 1. بناء الرسالة بالعربية
-        const message = `
+    
+    const messageText = `
 أهلاً، أود الاستفسار عن المنتج التالي:
 --------------------------------
 الاسم: ${Name}
@@ -27,14 +27,14 @@ function ProductCard ({ imageUrl, Name,  Description,badge,ID, Categories }: Pro
 الوصف: ${Description} 
 --------------------------------
 شكراً جزيلاً.
-        `.trim(); // استخدام trim() لإزالة الفراغات الزائدة
+    `.trim();
 
-        // 2. استخدام encodeURIComponent لضمان صلاحية الرسالة في الروابط
-        const encodedMessage = encodeURIComponent(message);
+    // نستخدم encodeURIComponent لضمان أن جميع الأحرف العربية والخاصة صالحة في الرابط
+    const encodedMessage = encodeURIComponent(messageText);
 
-        // 3. بناء الرابط النهائي
-        return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
-    };
+    // بناء رابط WhatsApp الصحيح (بدون شرطة مائلة إضافية في نهاية الرقم)
+    return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
+  };
 return (
 
   <div
@@ -60,7 +60,7 @@ return (
         <span>{rating}</span>
       </div> */}
       <p className="product-description mb-4">{Description}</p>
-      <a className="whatsapp-btn flex items-center gap-2 bg-green-500 text-white px-4 py-2 rounded" href="getWhatsappLink()" target="_blank" rel="noopener">
+      <a className="whatsapp-btn flex items-center gap-2 bg-green-500 text-white px-4 py-2 rounded" href={getWhatsappLink()} target="_blank" rel="noopener">
         <Image width={50} height={50} src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" className="whatsapp-logo w-5 h-5" />
         تواصل واتساب
       </a>
