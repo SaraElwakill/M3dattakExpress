@@ -1,18 +1,44 @@
 import React from 'react';
 import Image from 'next/image';
-
+import Badge from './Badge';
+import { Product } from '../app/page';
 interface ProductCardProps {
+  item: Product; 
   imageUrl: string;
   Name: string;
   Description: string;
+  badge: string; // خاصية الشارة الجديدة
 }
 
+const WHATSAPP_NUMBER = "201119201970"; 
+function ProductCard  ({ imageUrl, Name,  Description,badge }: ProductCardProps) {
+   const getWhatsappLink = (): string => {
+        // 1. بناء الرسالة بالعربية
+        const message = `
+أهلاً، أود الاستفسار عن المنتج التالي:
+--------------------------------
+الاسم: ${Name}
+الكود: ${ID}
+التصنيف: ${Categories}
+الوصف: ${Description} 
+--------------------------------
+شكراً جزيلاً.
+        `.trim(); // استخدام trim() لإزالة الفراغات الزائدة
 
-const ProductCard = ({ imageUrl, Name,  Description }: ProductCardProps) => (
+        // 2. استخدام encodeURIComponent لضمان صلاحية الرسالة في الروابط
+        const encodedMessage = encodeURIComponent(message);
+
+        // 3. بناء الرابط النهائي
+        return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodedMessage}`;
+    };
+return (
+
   <div
     className="product-card bg-white shadow-md rounded-lg overflow-hidden flex flex-col mb-6"
     style={{ width: '340px', minHeight: '440px', maxWidth: '100%' }}
   >
+   {badge==="TRUE"&& <Badge color="new" iconName="star">NEW ARRIVAL!</Badge>}
+      
     <div className="product-image-wrapper flex justify-center items-center p-0" style={{ height: '210px', background: '#f7fafc' }}>
       <Image
         src={imageUrl}
@@ -30,12 +56,12 @@ const ProductCard = ({ imageUrl, Name,  Description }: ProductCardProps) => (
         <span>{rating}</span>
       </div> */}
       <p className="product-description mb-4">{Description}</p>
-      <a className="whatsapp-btn flex items-center gap-2 bg-green-500 text-white px-4 py-2 rounded" href="https://wa.me/201119201970" target="_blank" rel="noopener">
+      <a className="whatsapp-btn flex items-center gap-2 bg-green-500 text-white px-4 py-2 rounded" href="getWhatsappLink()" target="_blank" rel="noopener">
         <Image width={50} height={50} src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" className="whatsapp-logo w-5 h-5" />
         تواصل واتساب
       </a>
     </div>
   </div>
-);
+};
 
 export default ProductCard;

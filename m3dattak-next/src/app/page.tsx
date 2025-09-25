@@ -66,6 +66,7 @@ export interface Product {
   Description: string;
   imageUrl: string; // الرابط الفعلي للصورة
   Categories: string;
+  badge:string;
   // ملاحظة: PapaParse دائماً يعيد القيم كنصوص (strings)
 }
 
