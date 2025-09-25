@@ -1,19 +1,12 @@
 /* eslint-disable */
 import React from 'react';
 import ProductCard from './ProductCard';
-type Product = {
-  id: string | number;
-  name: string;
-  image: string;
-  description: string;
 
-};
+import { Product as SheetProduct } from '../app/page';
 
-
-
-const Catalog = ({ products }:  { products: Product[] }) => (
+const Catalog = ({ products }:  { products: SheetProduct[] }) => (
   <main id="catalog" className="catalog container mx-auto py-10">
-    {Array.isArray(products) && products.map((product: Product, idx: number) => (
+    {Array.isArray(products) && products.map((product: SheetProduct, idx: number) => (
       <ProductCard key={idx} {...product} />
     ))}
   </main>

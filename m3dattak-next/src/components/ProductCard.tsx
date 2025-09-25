@@ -2,10 +2,9 @@ import React from 'react';
 import Image from 'next/image';
 
 interface ProductCardProps {
-  image: string;
-  name: string;
- 
-  description: string;
+  imageUrl: string;
+  Name: string;
+  Description: string;
 }
 
 

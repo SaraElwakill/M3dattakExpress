@@ -59,7 +59,7 @@ import { GetStaticProps } from 'next';
 //         return <div className="loading">جاري تحميل المنتجات...</div>;
 //     }
 
-interface SheetItem {
+export interface Product {
   ID: string;
   Image: string; // قد تكون مجرد رابط أو نص
   Name: string;
@@ -100,7 +100,7 @@ async function fetchSheetData(): Promise<SheetItem[]> {
 export default function Home() {
  
   
-   const [sheetData, setSheetData] = useState<SheetItem[]>([]);
+   const [sheetData, setSheetData] = useState<Product[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
   // استخدام useEffect لجلب البيانات عند تحميل المكون لأول مرة
