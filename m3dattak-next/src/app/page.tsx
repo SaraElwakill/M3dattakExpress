@@ -90,7 +90,7 @@ async function fetchSheetData(): Promise<SheetItem[]> {
       skipEmptyLines: true,
     });
     
-    return data as SheetItem[];
+    return data as Product[];
   } catch (error) {
     console.error("Error fetching data:", error);
     return [];
